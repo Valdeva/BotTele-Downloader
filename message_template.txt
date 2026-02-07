@@ -1,0 +1,18 @@
+👋 Selamat datang di TikTok Batch Downloader
+
+📥 Cara menggunakan:
+Kirim beberapa link TikTok dalam 1 pesan
+(Maksimal 5 link)
+
+🧾 Contoh format:
+https://vt.tiktok.com/xxxxxx
+https://www.tiktok.com/@user/video/yyyyy
+
+⚙️ Sistem otomatis:
+• Link ke-1 → Part 1
+• Link ke-2 → Part 2
+• Judul dari caption video
+• Tanpa watermark
+• Dikirim sebagai video
+
+🚀 Silakan kirim link TikTok sekarang

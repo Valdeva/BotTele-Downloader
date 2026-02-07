@@ -1,3 +1,4 @@
+import os
 import re
 import requests
 from telegram import Update
@@ -11,7 +12,7 @@ from telegram.ext import CommandHandler
 
 
 # ================== CONFIG ==================
-BOT_TOKEN = "8286915450:AAHCnq-cLx50cjwLwElhi4u8jN3bvpbaSOk"
+BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 MAX_LINKS = 5
 TIKWM_API = "https://www.tikwm.com/api/"
 # ============================================
@@ -107,6 +108,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "• Dikirim sebagai video\n\n"
         "🚀 Silakan kirim link TikTok sekarang"
     )
+if not BOT_TOKEN:
+    raise RuntimeError("TELEGRAM_BOT_TOKEN belum diset di environment variable")
+
 # ================== MAIN =====================
 def main():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
